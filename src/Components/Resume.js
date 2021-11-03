@@ -14,45 +14,46 @@ class Resume extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const skillmessage = this.props.data.skillmessage;
-    const education = this.props.data.education.map(function (education) {
+    const skillmessage = "Here you can see some of my most valuable skills";
+    // const education = this.props.data.education;
+    const education = this.props.data.map(function (education) {
       return (
-        <div key={education.school}>
-          <h3>{education.school}</h3>
+        <div key={education.institution}>
+          <h3>{education.institution}</h3>
           <p className="info">
-            {education.degree} <span>&bull;</span>
-            <em className="date">{education.graduated}</em>
+            {education.institution} <span>&bull;</span>
+            <em className="date">{education.institution}</em>
           </p>
-          <p>{education.description}</p>
+          <p>{education.institution}</p>
         </div>
       );
     });
 
-    const work = this.props.data.work.map(function (work) {
-      return (
-        <div key={work.company}>
-          <h3>{work.company}</h3>
-          <p className="info">
-            {work.title}
-            <span>&bull;</span> <em className="date">{work.years}</em>
-          </p>
-          <p>{work.description}</p>
-        </div>
-      );
-    });
+    // const work = this.props.data.work.map(function (work) {
+    //   return (
+    //     <div key={work.company}>
+    //       <h3>{work.company}</h3>
+    //       <p className="info">
+    //         {work.title}
+    //         <span>&bull;</span> <em className="date">{work.years}</em>
+    //       </p>
+    //       <p>{work.description}</p>
+    //     </div>
+    //   );
+    // });
 
-    const skills = this.props.data.skills.map((skills) => {
-      const backgroundColor = this.getRandomColor();
-      const className = "bar-expand " + skills.name.toLowerCase();
-      const width = skills.level;
+    // const skills = this.props.data.skills.map((skills) => {
+    //   const backgroundColor = "#323ac0";
+    //   const className = "bar-expand " + skills.name.toLowerCase();
+    //   const width = skills.level;
 
-      return (
-        <li key={skills.name}>
-          <span style={{ width, backgroundColor }} className={className}></span>
-          <em>{skills.name}</em>
-        </li>
-      );
-    });
+    //   return (
+    //     <li key={skills.name}>
+    //       <span style={{ width, backgroundColor }} className={className}></span>
+    //       <em>{skills.name}</em>
+    //     </li>
+    //   );
+    // });
 
     return (
       <section id="resume">
@@ -80,7 +81,7 @@ class Resume extends Component {
               </h1>
             </div>
 
-            <div className="nine columns main-col">{work}</div>
+            {/* <div className="nine columns main-col">{work}</div> */}
           </div>
         </Slide>
 
@@ -93,10 +94,10 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-              <p>{skillmessage}</p>
+              {/* <p>{skillmessage}</p> */}
 
               <div className="bars">
-                <ul className="skills">{skills}</ul>
+                {/* <ul className="skills">{skills}</ul> */}
               </div>
             </div>
           </div>

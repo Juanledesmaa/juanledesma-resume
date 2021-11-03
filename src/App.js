@@ -5,7 +5,10 @@ import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
-import Resume from "./Components/Resume";
+import Education from "./Components/Education";
+import Work from "./Components/Work";
+import Skills from "./Components/Skills";
+import Testimonials from "./Components/Testimonials";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 
@@ -23,7 +26,7 @@ class App extends Component {
 
   getResumeData() {
     $.ajax({
-      url: "./resumeData.json",
+      url: "https://gitconnected.com/v1/portfolio/juanledesmaa",
       dataType: "json",
       cache: false,
       success: function(data) {
@@ -41,14 +44,18 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} />
-        <About data={this.state.resumeData.main} />
-        <Resume data={this.state.resumeData.resume} />
-        <Portfolio data={this.state.resumeData.portfolio} />
-        <Contact data={this.state.resumeData.main} />
-        <Footer data={this.state.resumeData.main} />
+        <Header data={this.state.resumeData.basics} />
+        <About data={this.state.resumeData.basics} />
+        <Education data={this.state.resumeData.education} />
+        <Work data={this.state.resumeData.work} />
+        <Skills data={this.state.resumeData.skills} />
+        <Testimonials data={this.state.resumeData.skills} />
+        {/* <Contact data={this.state.resumeData.basics} /> */}
+        <Footer data={this.state.resumeData.basics} />
+        {/* <Portfolio data={this.state.resumeData.basics} /> */}
       </div>
     );
   }

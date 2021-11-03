@@ -2,14 +2,20 @@ import React, { Component } from "react";
 import Fade from "react-reveal";
 
 class Footer extends Component {
+
+  getProfileIcon(name) {
+    console.log(name);
+    return "fa fa-" + name.toLowerCase();
+  }
+
   render() {
     if (!this.props.data) return null;
 
-    const networks = this.props.data.social.map(function (network) {
+    const networks = this.props.data.profiles.map((profile) => {
       return (
-        <li key={network.name}>
-          <a href={network.url}>
-            <i className={network.className}></i>
+        <li key={profile.network}>
+          <a href={profile.url}>
+            <i className={this.getProfileIcon(profile.network)}></i>
           </a>
         </li>
       );
@@ -23,12 +29,9 @@ class Footer extends Component {
               <ul className="social-links">{networks}</ul>
 
               <ul className="copyright">
-                <li>&copy; Copyright 2021 Nordic Giant</li>
+                <li>&copy; Copyright 2021 Juan Ledesma</li>
                 <li>
-                  Design by{" "}
-                  <a title="Styleshout" href="http://www.styleshout.com/">
-                    Styleshout
-                  </a>
+                  Design by Juan Ledesma
                 </li>
               </ul>
             </div>

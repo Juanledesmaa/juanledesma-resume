@@ -61,6 +61,9 @@ header .banner-text h1 {
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
 }
+.special-text {
+   color: #fff;
+}
 header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;
    color: #ddd;
@@ -232,9 +235,16 @@ ul#nav li.current a { color: #fe6928; }
 
 #resume {
    background: #fff;
-   padding-top: 90px;
-   padding-bottom: 72px;
+   padding-top: 30px;
    overflow: hidden;
+}
+
+#resume.first-resume {
+   padding-top: 80px;
+}
+
+#resume.work {
+   background: #fff;
 }
 
 #resume a, #resume a:visited  { color: #0762f9; }
@@ -276,6 +286,109 @@ ul#nav li.current a { color: #fe6928; }
    margin-top: 6px;
 }
 
+/* ------------------------------------------------------------------ */
+/* d. Work Section
+/* ------------------------------------------------------------------ */
+
+#work {
+   background: #fff;
+   padding-top: 30px;
+   overflow: hidden;
+}
+
+#work.first-resume {
+   padding-top: 80px;
+}
+
+#work.work {
+   background: #fff;
+}
+
+#work a, #work a:visited  { color: #0762f9; }
+#work a:hover, #work a:focus { color: #313131; }
+
+#work h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+#work h1 span {
+   border-bottom: 3px solid #0762f9;
+   padding-bottom: 6px;
+}
+#work h3 {
+   font: 25px/30px 'opensans-bold', sans-serif;
+}
+
+#work .header-col { padding-top: 9px; }
+#work .main-col { padding-right: 10%; }
+
+#work .info {
+   font: 16px/24px 'librebaskerville-italic', serif;
+   color: #6E7881;
+   margin-bottom: 18px;
+   margin-top: 9px;
+}
+#work .info span {
+   margin-right: 5px;
+   margin-left: 5px;
+}
+#work .date {
+   font: 15px/24px 'opensans-regular', sans-serif;
+   margin-top: 6px;
+}
+
+/* ------------------------------------------------------------------ */
+/* d. Skills Section
+/* ------------------------------------------------------------------ */
+
+#skills {
+   background: #fff;
+   padding-top: 30px;
+   overflow: hidden;
+}
+
+#skills.first-resume {
+   padding-top: 80px;
+}
+
+#skilss.work {
+   background: #fff;
+}
+
+#skills a, #skills a:visited  { color: #0762f9; }
+#skills a:hover, #skills a:focus { color: #313131; }
+
+#skills h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+#skills h1 span {
+   border-bottom: 3px solid #0762f9;
+   padding-bottom: 6px;
+}
+#skills h3 {
+   font: 25px/30px 'opensans-bold', sans-serif;
+}
+
+#skills .header-col { padding-top: 9px; }
+#skills .main-col { padding-right: 10%; }
+
+#skills .info {
+   font: 16px/24px 'librebaskerville-italic', serif;
+   color: #6E7881;
+   margin-bottom: 18px;
+   margin-top: 9px;
+}
+#skills .info span {
+   margin-right: 5px;
+   margin-left: 5px;
+}
+#skills .date {
+   font: 15px/24px 'opensans-regular', sans-serif;
+   margin-top: 6px;
+}
 /*----------------------------------------------*/
 /*	Skill Bars
 /*----------------------------------------------*/
@@ -555,6 +668,8 @@ ul#nav li.current a { color: #fe6928; }
 }
 .popup-modal a:hover {	color: #00CCCC; }
 .popup-modal a.popup-modal-dismiss { margin-left: 24px; }
+.work-info { margin-bottom: 40px; }
+.work-highlight-item { margin-bottom: 5px; }
 
 
 /* fadein/fadeout effect for modal popup

@@ -3,13 +3,25 @@ import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
 
 class Header extends Component {
+
+  getGithubUrl(profilesArray) {
+    let githubUrlElement = profilesArray.find(element => element.network === 'GitHub');
+    return githubUrlElement.url;
+  }
+
+  getLinkedSocial(profilesArray) {
+    let linkedSocialElement = profilesArray.find(element => element.network === 'LinkedIn');
+    return linkedSocialElement.url;
+  }
+
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
-    const github = this.props.data.github;
+    const linkedSocial = this.getLinkedSocial(this.props.data.profiles);
+    const position = this.props.data.label;
+    const github = this.getGithubUrl(this.props.data.profiles);
     const name = this.props.data.name;
-    const description = this.props.data.description;
+    const headline = this.props.data.headline;
 
     return (
       <header id="home">
@@ -38,16 +50,20 @@ class Header extends Component {
 
             <li>
               <a className="smoothscroll" href="#resume">
-                Resume
+                Education
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#portfolio">
-                Works
+              <a className="smoothscroll" href="#work">
+                Work
               </a>
             </li>
-
+            <li>
+              <a className="smoothscroll" href="#skills">
+                Skills
+              </a>
+            </li>
             <li>
               <a className="smoothscroll" href="#contact">
                 Contact
@@ -60,15 +76,16 @@ class Header extends Component {
           <div className="banner-text">
             <Fade bottom>
               <h1 className="responsive-headline">{name}</h1>
+              <h2 className="responsive-headline special-text">{position}</h2>
             </Fade>
             <Fade bottom duration={1200}>
-              <h3>{description}.</h3>
+              <h3>{headline}.</h3>
             </Fade>
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+                <a href={linkedSocial} className="button btn project-btn">
+                  <i className="fa fa-book"></i>LinkedIn
                 </a>
                 <a href={github} className="button btn github-btn">
                   <i className="fa fa-github"></i>Github

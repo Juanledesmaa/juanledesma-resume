@@ -2,19 +2,22 @@ import React, { Component } from "react";
 import Fade from "react-reveal";
 
 class About extends Component {
+
+  getResumeLink(profilesArray) {
+    let linkedSocialElement = profilesArray.find(element => element.network === 'gitconnected');
+    return linkedSocialElement.url + "/resume";
+  }
+
   render() {
     if (!this.props.data) return null;
 
     const name = this.props.data.name;
-    const profilepic = "images/" + this.props.data.image;
-    const bio = this.props.data.bio;
-    const street = this.props.data.address.street;
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
+    const profilepic = this.props.data.image;
+    const bio = this.props.data.summary;
+    const city = this.props.data.locationAsString;
     const phone = this.props.data.phone;
     const email = this.props.data.email;
-    const resumeDownload = this.props.data.resumedownload;
+    const resumeDownload = this.getResumeLink(this.props.data.profiles);
 
     return (
       <section id="about">
@@ -24,7 +27,7 @@ class About extends Component {
               <img
                 className="profile-pic"
                 src={profilepic}
-                alt="Nordic Giant Profile Pic"
+                alt="Juan Ledesma Profile Pic"
               />
             </div>
             <div className="nine columns main-col">
@@ -38,14 +41,12 @@ class About extends Component {
                     <span>{name}</span>
                     <br />
                     <span>
-                      {street}
+                      {city}
                       <br />
-                      {city} {state}, {zip}
                     </span>
-                    <br />
                     <span>{phone}</span>
                     <br />
-                    <span>{email}</span>
+                    <span>jlmanuel8540@gmail.com</span>
                   </p>
                 </div>
                 <div className="columns download">
