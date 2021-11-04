@@ -19,6 +19,13 @@
       margin: 0 auto 12px auto;
    }
 
+   .project-btn{
+      width: 100%;
+   }
+
+   .github-btn{
+      width: 100%;
+   }
 }
 
 /* screenwidth less than 900px
@@ -225,7 +232,8 @@
 
    /* About Section
    -------------------------------------------------------------------- */
-   #about .profile-pic { display: none; }
+   #about .profile-pic { text-align: center; }
+   #about .columns-profile-pic { text-align: center; }
    #about .download .button {
       width: 100%;
       text-align: center;
