@@ -226,10 +226,6 @@
    }
    header .social li { margin: 0 10px; }
 
-    /* scrolldown link */
-   header .scrolldown { display: none; }
-
-
    /* About Section
    -------------------------------------------------------------------- */
    #about .profile-pic { text-align: center; }
