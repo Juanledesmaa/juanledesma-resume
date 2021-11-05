@@ -18,8 +18,8 @@ class Skills extends Component {
     const skills = this.props.data.map((skills) => {
       const backgroundColor = this.getRandomColor();
       const className = "bar-expand " + skills.name.toLowerCase();
-      const skillRating = ((skills.rating + 4) * 10).toString() + "%"
-      const width =  skillRating
+      const skillRating = ((skills.rating + 4) * 10).toString() + "%";
+      const width =  skillRating;
 
       return (
         <li key={skills.name}>
