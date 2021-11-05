@@ -20,9 +20,9 @@ class Work extends Component {
             <h3>{work.company}</h3>
             <p className="info">
             {work.position}
-            <span>&bull;</span> <em className="date">{work.startDate} - {this.getFormattedEndDate(work.endDate)}</em>
+            <span>&bull;</span> <em className="date">{work.startDate} &#8594; {this.getFormattedEndDate(work.endDate)}</em>
             </p>
-            <h4>highlights</h4>
+            <h4>Highlights</h4>
             {
                 work.highlights.map((highlight) => {
                     return (
