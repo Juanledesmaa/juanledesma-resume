@@ -205,8 +205,7 @@
    /* Header Styles
    -------------------------------------------------------------------- */
    header .banner {
-      padding-bottom: 12px;
-      padding-top: 6px;
+      padding-bottom: 40px;
    }
    header .banner-text h1 { font: 68px/1.1em 'opensans-bold', sans-serif; }
    header .banner-text h3 {
@@ -225,10 +224,6 @@
       line-height: 36px;      
    }
    header .social li { margin: 0 10px; }
-
-    /* scrolldown link */
-   header .scrolldown { display: none; }
-
 
    /* About Section
    -------------------------------------------------------------------- */
@@ -393,7 +388,6 @@
 
    /* header styles
    -------------------------------------------------------------------- */
-   header .banner { padding-top: 24px; }
    header .banner-text h1 {
       font: 40px/1.1em 'opensans-bold', sans-serif;      
       margin: 0 auto 24px auto;

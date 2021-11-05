@@ -93,13 +93,12 @@ class Header extends Component {
               </ul>
             </Fade>
           </div>
+          <p className="scrolldown">
+            <a className="smoothscroll" href="#about">
+              <i className="icon-down-circle"></i>
+            </a>
+          </p>
         </div>
-
-        <p className="scrolldown">
-          <a className="smoothscroll" href="#about">
-            <i className="icon-down-circle"></i>
-          </a>
-        </p>
       </header>
     );
   }
