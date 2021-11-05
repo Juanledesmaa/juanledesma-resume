@@ -18,7 +18,8 @@ class Skills extends Component {
     const skills = this.props.data.map((skills) => {
       const backgroundColor = this.getRandomColor();
       const className = "bar-expand " + skills.name.toLowerCase();
-      const width = "90%";//TODO: this should be dynamic
+      const skillRating = ((skills.rating + 4) * 10).toString() + "%"
+      const width =  skillRating
 
       return (
         <li key={skills.name}>
